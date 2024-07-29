@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("src/main/java/com/mayang/mapper")
+@MapperScan("com.mayang.mapper")
 public class BootStrap {
 
     public static void main(String[] args){
