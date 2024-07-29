@@ -13,6 +13,6 @@ public class OperateLogServiceImpl implements OperateLogService {
 
     @Override
     public void record() {
-
+        //暂不实现
     }
 }
