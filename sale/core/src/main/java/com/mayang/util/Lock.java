@@ -1,4 +1,4 @@
-package com.mayang.redis;
+package com.mayang.util;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
