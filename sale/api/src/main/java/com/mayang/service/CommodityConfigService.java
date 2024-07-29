@@ -1,10 +1,10 @@
 package com.mayang.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mayang.common.Result;
 import com.mayang.dto.request.CreateCommodityDTO;
 import com.mayang.dto.request.SearchCommodityDTO;
 import com.mayang.dto.request.ShelfCommodityDTO;
+import com.mayang.rpc.Result;
 
 /**
  * 商品信息配置请求接口

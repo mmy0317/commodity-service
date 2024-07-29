@@ -1,4 +1,4 @@
-package com.mayang.common;
+package com.mayang.rpc;
 
 
 import lombok.Data;
