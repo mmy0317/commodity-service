@@ -1,4 +1,4 @@
-package com.mayang.service.impl;
+package com.mayang.service.impl.commodity;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -11,7 +11,7 @@ import com.mayang.dto.request.SearchCommodityDTO;
 import com.mayang.dto.request.ShelfCommodityDTO;
 import com.mayang.enums.CommodityStateEnum;
 import com.mayang.mapper.CommodityConfigMapper;
-import com.mayang.service.CommodityConfigService;
+import com.mayang.facade.commodity.CommodityConfigService;
 import com.mayang.service.OperateLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

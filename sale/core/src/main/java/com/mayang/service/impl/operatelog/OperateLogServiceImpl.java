@@ -1,4 +1,4 @@
-package com.mayang.service.impl;
+package com.mayang.service.impl.operatelog;
 
 import com.mayang.service.OperateLogService;
 import org.springframework.stereotype.Service;

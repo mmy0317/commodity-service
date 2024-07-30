@@ -1,4 +1,4 @@
-package com.mayang.service;
+package com.mayang.facade.commodity;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mayang.common.Result;
