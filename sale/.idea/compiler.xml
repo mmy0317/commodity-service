@@ -19,6 +19,7 @@
       <module name="api" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="sale" options="-parameters" />
     </option>
   </component>
 </project>
