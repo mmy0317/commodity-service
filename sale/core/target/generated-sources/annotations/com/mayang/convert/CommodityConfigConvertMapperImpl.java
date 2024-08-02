@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-07-30T10:30:28+0800",
+    date = "2024-08-02T09:43:53+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_292 (AdoptOpenJDK)"
 )
 public class CommodityConfigConvertMapperImpl implements CommodityConfigConvertMapper {
