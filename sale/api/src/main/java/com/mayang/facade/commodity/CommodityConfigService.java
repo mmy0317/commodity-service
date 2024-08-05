@@ -16,7 +16,7 @@ public interface CommodityConfigService {
      * 新增商品配置(配置商品信息)
      * @return
      */
-    Result<Void> createCommodityConfig(CreateCommodityDTO createCommodityDTO);
+    void createCommodityConfig(CreateCommodityDTO createCommodityDTO);
 
     /**
      * 商品配置上架

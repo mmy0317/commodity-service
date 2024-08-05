@@ -37,7 +37,7 @@ public class CommodityConfigServiceImpl implements CommodityConfigService {
     private OperateLogService operateLogService;
 
     @Override
-    public Result<Void> createCommodityConfig(CreateCommodityDTO createCommodityDTO) {
+    public void createCommodityConfig(CreateCommodityDTO createCommodityDTO) {
         //step1 数据校验(什么商品名称不存在特殊字符, 什么价格必须xx, 库存数必须大于0)
         //step2 数据转换
         CommodityConfigDO commodityConfigDO = CommodityConfigConvertMapper.INSTANCE.CommodityConfigDoConvertFromDto(createCommodityDTO);
@@ -47,7 +47,6 @@ public class CommodityConfigServiceImpl implements CommodityConfigService {
         commodityConfigMapper.insert(commodityConfigDO);
         //step4 记录操作日志
         operateLogService.record();
-        return Result.success();
     }
 
     @Override
