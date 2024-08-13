@@ -4,7 +4,7 @@
     <root id="archive" name="sale.jar">
       <element id="module-output" name="api" />
       <element id="module-output" name="sale" />
-      <element id="module-output" name="core" />
+      <element id="module-output" name="server" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-kqueue/4.1.74.Final/netty-transport-native-kqueue-4.1.74.Final-osx-x86_64.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.2/commons-cli-1.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.74.Final/netty-codec-4.1.74.Final.jar" path-in-jar="/" />
