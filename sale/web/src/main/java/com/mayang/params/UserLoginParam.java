@@ -1,7 +1,9 @@
 package com.mayang.params;
 
 import com.mayang.enums.LoginType;
-import com.sun.istack.internal.NotNull;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import lombok.Data;
 
 @Data
@@ -10,6 +12,7 @@ public class UserLoginParam {
     /**
      * 手机号
      */
+    @NotBlank(message="手机号不能为空")
     private String phoneNumber;
 
     /**
@@ -20,6 +23,7 @@ public class UserLoginParam {
     /**
      * 登录类型
      */
+    @NotNull(message="登录类型不能为空")
     private LoginType loginType;
 
     /**

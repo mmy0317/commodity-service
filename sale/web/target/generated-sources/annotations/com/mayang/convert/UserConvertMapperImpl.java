@@ -1,12 +1,12 @@
 package com.mayang.convert;
 
-import com.mayang.dto.request.UserLoginDTO;
+import com.mayang.dto.UserLoginDTO;
 import com.mayang.params.UserLoginParam;
 import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-07T16:09:29+0800",
+    date = "2024-08-12T15:56:23+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_292 (AdoptOpenJDK)"
 )
 public class UserConvertMapperImpl implements UserConvertMapper {

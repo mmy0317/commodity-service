@@ -1,12 +1,12 @@
 package com.mayang.convert;
 
 import com.mayang.dos.CommodityConfigDO;
-import com.mayang.dto.request.CreateCommodityDTO;
+import com.mayang.dto.CreateCommodityDTO;
 import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-07T16:09:32+0800",
+    date = "2024-08-12T15:56:19+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_292 (AdoptOpenJDK)"
 )
 public class CommodityConfigConvertMapperImpl implements CommodityConfigConvertMapper {

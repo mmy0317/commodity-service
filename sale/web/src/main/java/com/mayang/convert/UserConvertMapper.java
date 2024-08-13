@@ -1,7 +1,7 @@
 package com.mayang.convert;
 
 
-import com.mayang.dto.request.UserLoginDTO;
+import com.mayang.dto.UserLoginDTO;
 import com.mayang.params.UserLoginParam;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

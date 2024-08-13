@@ -1,8 +1,6 @@
 package com.mayang.service.impl.users;
 
-import com.mayang.dto.request.UserLoginDTO;
-import com.mayang.dto.response.LoginUserInfoDTO;
-import com.mayang.facade.users.UserService;
+import com.mayang.service.UserService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,13 +11,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Override
-    public LoginUserInfoDTO getUserDetail(String userCode) {
-        return null;
-    }
-
-    @Override
-    public LoginUserInfoDTO userLogin(UserLoginDTO userLoginDTO) {
-        return null;
-    }
+//    @Override
+//    public LoginUserInfoDTO getUserDetail(String userCode) {
+//        LoginUserInfoDTO loginUserInfoDTO = new LoginUserInfoDTO();
+//        loginUserInfoDTO.setUserCode("01");
+//        loginUserInfoDTO.setPhoneNumber("18851976933");
+//        loginUserInfoDTO.setNickName("mayang");
+//        loginUserInfoDTO.setRoleEnum(RoleEnum.ADMINISTRATOR);
+//
+//        return loginUserInfoDTO;
+//    }
+//
+//    @Override
+//    public LoginUserInfoDTO userLogin(UserLoginDTO userLoginDTO) {
+//        LoginUserInfoDTO loginUserInfoDTO = new LoginUserInfoDTO();
+//        loginUserInfoDTO.setUserCode("01");
+//        loginUserInfoDTO.setPhoneNumber("18851976933");
+//        loginUserInfoDTO.setNickName("mayang");
+//        loginUserInfoDTO.setRoleEnum(RoleEnum.ADMINISTRATOR);
+//
+//        return loginUserInfoDTO;
+//    }
 }

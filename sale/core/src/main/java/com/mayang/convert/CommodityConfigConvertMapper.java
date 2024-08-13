@@ -2,7 +2,7 @@ package com.mayang.convert;
 
 
 import com.mayang.dos.CommodityConfigDO;
-import com.mayang.dto.request.CreateCommodityDTO;
+import com.mayang.dto.CreateCommodityDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

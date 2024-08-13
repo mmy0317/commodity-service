@@ -17,6 +17,6 @@ public class WebConfig implements WebMvcConfigurer {
         // 添加拦截器，并设置拦截的路径和排除的路径
         registry.addInterceptor(myInterceptor)
                 .addPathPatterns("/**") // 拦截所有请求
-                .excludePathPatterns("/login", "/static/**", "/css/**", "/js/**", "/images/**"); // 排除登录接口和静态资源
+                .excludePathPatterns("/login","/register", "/static/**", "/css/**", "/js/**", "/images/**"); // 排除登录接口和静态资源
     }
 }
