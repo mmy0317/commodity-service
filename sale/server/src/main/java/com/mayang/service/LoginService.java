@@ -1,6 +1,6 @@
 package com.mayang.service;
 
-import com.mayang.entity.dto.LoginUserInfoDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.enums.LoginType;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +11,7 @@ public interface LoginService {
      * 校验token有效性
      * @param httpServletRequest
      */
-    LoginUserInfoDTO checkToken(HttpServletRequest httpServletRequest) throws Exception;
+    UserInfoDTO checkToken(HttpServletRequest httpServletRequest) throws Exception;
 
     /**
      * 用户登录
@@ -20,7 +20,7 @@ public interface LoginService {
      * @param loginType 登录类型
      * @return
      */
-    LoginUserInfoDTO userLogin(String phoneNumber, String verificationCode, LoginType loginType);
+    UserInfoDTO userLogin(String phoneNumber, String verificationCode, LoginType loginType);
 
     /**
      * 用户注册

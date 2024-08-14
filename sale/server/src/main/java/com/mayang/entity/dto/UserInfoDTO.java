@@ -5,7 +5,7 @@ import com.mayang.enums.RoleEnum;
 import lombok.Data;
 
 @Data
-public class LoginUserInfoDTO {
+public class UserInfoDTO {
 
     private String userCode;
 

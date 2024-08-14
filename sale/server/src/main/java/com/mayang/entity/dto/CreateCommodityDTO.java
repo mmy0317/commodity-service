@@ -4,6 +4,7 @@ package com.mayang.entity.dto;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 
 /**
@@ -21,10 +22,16 @@ public class CreateCommodityDTO implements Serializable {
     /**
      * 商品单价
      */
-    private Long commodityPrice;
+    private BigDecimal commodityPrice;
 
     /**
      * 商品库存数
      */
     private Integer commodityCount;
+
+    /**
+     * 商品示例图
+     */
+    private String commodityPicture;
+
 }

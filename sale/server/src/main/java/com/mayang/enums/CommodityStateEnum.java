@@ -7,11 +7,11 @@ import lombok.Getter;
 @Getter
 public enum CommodityStateEnum {
 
-    ORIGINAL(0, "初始状态"),
+    ORIGINAL(0, "未上架"),
 
     SALE(10,"已上架"),
 
-    DELETE(20,"已下架")
+    DELETE(20,"已删除")
 
     ;
 

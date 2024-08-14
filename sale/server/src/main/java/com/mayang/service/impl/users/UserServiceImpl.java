@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
 //    @Override
-//    public LoginUserInfoDTO getUserDetail(String userCode) {
-//        LoginUserInfoDTO loginUserInfoDTO = new LoginUserInfoDTO();
+//    public UserInfoDTO getUserDetail(String userCode) {
+//        UserInfoDTO loginUserInfoDTO = new UserInfoDTO();
 //        loginUserInfoDTO.setUserCode("01");
 //        loginUserInfoDTO.setPhoneNumber("18851976933");
 //        loginUserInfoDTO.setNickName("mayang");
@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
 //    }
 //
 //    @Override
-//    public LoginUserInfoDTO userLogin(UserLoginDTO userLoginDTO) {
-//        LoginUserInfoDTO loginUserInfoDTO = new LoginUserInfoDTO();
+//    public UserInfoDTO userLogin(UserLoginDTO userLoginDTO) {
+//        UserInfoDTO loginUserInfoDTO = new UserInfoDTO();
 //        loginUserInfoDTO.setUserCode("01");
 //        loginUserInfoDTO.setPhoneNumber("18851976933");
 //        loginUserInfoDTO.setNickName("mayang");

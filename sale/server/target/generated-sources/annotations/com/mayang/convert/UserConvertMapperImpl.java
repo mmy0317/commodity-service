@@ -1,7 +1,7 @@
 package com.mayang.convert;
 
 import com.mayang.entity.dos.UserDO;
-import com.mayang.entity.dto.LoginUserInfoDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.entity.dto.UserLoginDTO;
 import com.mayang.entity.params.UserLoginParam;
 import com.mayang.entity.vo.LoginUserInfoVO;
@@ -9,24 +9,24 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-13T21:30:37+0800",
+    date = "2024-08-13T21:35:22+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_292 (AdoptOpenJDK)"
 )
 public class UserConvertMapperImpl implements UserConvertMapper {
 
     @Override
-    public LoginUserInfoDTO userDoToUserDto(UserDO userDO) {
+    public UserInfoDTO userDoToUserDto(UserDO userDO) {
         if ( userDO == null ) {
             return null;
         }
 
-        LoginUserInfoDTO loginUserInfoDTO = new LoginUserInfoDTO();
+        UserInfoDTO userInfoDTO= new UserInfoDTO();
 
-        loginUserInfoDTO.setUserCode( userDO.getUserCode() );
-        loginUserInfoDTO.setPhoneNumber( userDO.getPhoneNumber() );
-        loginUserInfoDTO.setNickName( userDO.getNickName() );
+        userInfoDTO.setUserCode( userDO.getUserCode() );
+        userInfoDTO.setPhoneNumber( userDO.getPhoneNumber() );
+        userInfoDTO.setNickName( userDO.getNickName() );
 
-        return loginUserInfoDTO;
+        return userInfoDTO;
     }
 
     @Override
@@ -46,18 +46,18 @@ public class UserConvertMapperImpl implements UserConvertMapper {
     }
 
     @Override
-    public LoginUserInfoVO userDtoToUserVo(LoginUserInfoDTO loginUserInfoDTO) {
-        if ( loginUserInfoDTO == null ) {
+    public LoginUserInfoVO userDtoToUserVo(UserInfoDTO userInfoDTO) {
+        if ( userInfoDTO == null ) {
             return null;
         }
 
         LoginUserInfoVO loginUserInfoVO = new LoginUserInfoVO();
 
-        loginUserInfoVO.setUserCode( loginUserInfoDTO.getUserCode() );
-        loginUserInfoVO.setPhoneNumber( loginUserInfoDTO.getPhoneNumber() );
-        loginUserInfoVO.setNickName( loginUserInfoDTO.getNickName() );
-        loginUserInfoVO.setAccessToken( loginUserInfoDTO.getAccessToken() );
-        loginUserInfoVO.setRoleEnum( loginUserInfoDTO.getRoleEnum() );
+        loginUserInfoVO.setUserCode( userInfoDTO.getUserCode() );
+        loginUserInfoVO.setPhoneNumber( userInfoDTO.getPhoneNumber() );
+        loginUserInfoVO.setNickName( userInfoDTO.getNickName() );
+        loginUserInfoVO.setAccessToken( userInfoDTO.getAccessToken() );
+        loginUserInfoVO.setRoleEnum( userInfoDTO.getRoleEnum() );
 
         return loginUserInfoVO;
     }

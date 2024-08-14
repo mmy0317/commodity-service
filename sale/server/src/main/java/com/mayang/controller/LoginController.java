@@ -1,7 +1,7 @@
 package com.mayang.controller;
 
 import com.mayang.convert.UserConvertMapper;
-import com.mayang.entity.dto.LoginUserInfoDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.entity.vo.LoginUserInfoVO;
 import com.mayang.util.Result;
 import com.mayang.entity.params.UserLoginParam;
@@ -27,12 +27,12 @@ public class LoginController {
     @PostMapping("/login")
     @ApiOperation(value="用户登录")
     public Result<LoginUserInfoVO> userLogin(@RequestBody UserLoginParam userLoginParam){
-        LoginUserInfoDTO loginUserInfoDTO = loginService.userLogin(userLoginParam.getPhoneNumber(),
+        UserInfoDTO userInfoDTO= loginService.userLogin(userLoginParam.getPhoneNumber(),
                 userLoginParam.getVerificationCode(),userLoginParam.getLoginType());
-        if (Objects.isNull(loginUserInfoDTO) || StringUtils.isBlank(loginUserInfoDTO.getAccessToken())) {
+        if (Objects.isNull(userInfoDTO) || StringUtils.isBlank(userInfoDTO.getAccessToken())) {
             return Result.fail(Result.FAIL_CODE, "登录失败");
         }
-        LoginUserInfoVO loginUserInfoVO = UserConvertMapper.INSTANCE.userDtoToUserVo(loginUserInfoDTO);
+        LoginUserInfoVO loginUserInfoVO = UserConvertMapper.INSTANCE.userDtoToUserVo(userInfoDTO);
         return Result.success(loginUserInfoVO);
     }
 

@@ -3,7 +3,7 @@ package com.mayang.service.impl.users;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mayang.entity.dos.UserDO;
-import com.mayang.entity.dto.LoginUserInfoDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.util.JWTUtil;
 import com.mayang.convert.UserConvertMapper;
 import com.mayang.enums.LoginType;
@@ -49,7 +49,7 @@ public class LoginServiceImpl implements LoginService {
      * @return
      */
     @Override
-    public LoginUserInfoDTO checkToken(HttpServletRequest httpServletRequest) throws Exception{
+    public UserInfoDTO checkToken(HttpServletRequest httpServletRequest) throws Exception{
         //step1 token存在性校验, 不存在token直接返回
         String token = httpServletRequest.getHeader(SECURITY_TOKEN);
         if (StringUtils.isBlank(token)){
@@ -79,7 +79,7 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public LoginUserInfoDTO userLogin(String phoneNumber, String verificationCode, LoginType loginType) {
+    public UserInfoDTO userLogin(String phoneNumber, String verificationCode, LoginType loginType) {
         log.info("用户登录信息:{},{},{}", phoneNumber, verificationCode, loginType.name());
         //step1 校验用户详细信息
         QueryWrapper<UserDO> userDOQueryWrapper = new QueryWrapper<>();
@@ -96,9 +96,9 @@ public class LoginServiceImpl implements LoginService {
         }
         //生成token
         String accessToken = JWTUtil.createJWT(userDO.getUserCode());
-        LoginUserInfoDTO loginUserInfoDTO = UserConvertMapper.INSTANCE.userDoToUserDto(userDO);
-        loginUserInfoDTO.setAccessToken(accessToken);
-        return loginUserInfoDTO;
+        UserInfoDTO userInfoDTO= UserConvertMapper.INSTANCE.userDoToUserDto(userDO);
+        userInfoDTO.setAccessToken(accessToken);
+        return userInfoDTO;
     }
 
     private void passwordLoginCheck(String phoneNumber,String password){

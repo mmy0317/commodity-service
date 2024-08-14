@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mayang.entity.dto.LoginUserInfoDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -27,8 +27,8 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //获取用户token进行校验
-        LoginUserInfoDTO loginUserInfoDTO = loginService.checkToken(request);
-        if (Objects.isNull(loginUserInfoDTO)){
+        UserInfoDTO userInfoDTO= loginService.checkToken(request);
+        if (Objects.isNull(userInfoDTO)){
             return false;
         }
         return true;
