@@ -26,4 +26,18 @@ public class StringUtil {
         return result;
     }
 
+    public static String replaceByArrays(String str, String source, Object... targetArrays){
+        String result = str;
+        for (int i = 0; i < targetArrays.length; i++){
+            String target = targetArrays[i].toString();
+            result = result.replaceFirst(source,target);
+        }
+        return result;
+    }
+
+
+    public static void main(String[] args){
+
+    }
+
 }

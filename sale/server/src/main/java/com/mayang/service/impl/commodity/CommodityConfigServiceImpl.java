@@ -12,6 +12,7 @@ import com.mayang.entity.dto.ShelfCommodityDTO;
 import com.mayang.mapper.CommodityMapper;
 import com.mayang.service.CommodityConfigService;
 import com.mayang.service.CommodityOperateLogService;
+import com.mayang.util.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -45,12 +46,16 @@ public class CommodityConfigServiceImpl implements CommodityConfigService {
         commodityDO.createCommodity(createCommodityDTO);
         commodityMapper.insert(commodityDO);
         //step3 记录操作日志
-        commodityOperateLogService.record(CommodityOperateEnum.CREATE,
+        String operateDetail = StringUtil.replaceByArrays(
+                CommodityOperateEnum.CREATE.getOperateDetail(),
+                "\\{\\}",
                 commodityDO.getId(),
                 commodityDO.getCommodityName(),
                 commodityDO.getCommodityPrice(),
                 commodityDO.getCommodityCount(),
-                commodityDO.getCommodityPicture());
+                commodityDO.getCommodityPicture()
+        );
+        commodityOperateLogService.record(CommodityOperateEnum.CREATE, commodityDO.getId(), operateDetail);
     }
 
     private void commodityConfigCheck(String name, BigDecimal price, Integer count){

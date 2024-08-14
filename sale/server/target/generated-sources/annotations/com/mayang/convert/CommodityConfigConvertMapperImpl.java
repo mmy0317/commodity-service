@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-13T21:35:22+0800",
+    date = "2024-08-14T14:39:56+0800",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_292 (AdoptOpenJDK)"
 )
 public class CommodityConfigConvertMapperImpl implements CommodityConfigConvertMapper {
@@ -17,11 +17,12 @@ public class CommodityConfigConvertMapperImpl implements CommodityConfigConvertM
             return null;
         }
 
-        CommodityDO commodityDO= new CommodityDO();
+        CommodityDO commodityDO = new CommodityDO();
 
         commodityDO.setCommodityName( createCommodityDTO.getCommodityName() );
         commodityDO.setCommodityPrice( createCommodityDTO.getCommodityPrice() );
         commodityDO.setCommodityCount( createCommodityDTO.getCommodityCount() );
+        commodityDO.setCommodityPicture( createCommodityDTO.getCommodityPicture() );
 
         return commodityDO;
     }

@@ -12,7 +12,7 @@ public interface CommodityOperateLogService {
     /**
      * 记录操作日志
      */
-    void record(CommodityOperateEnum commodityOperateEnum, Object... detail);
+    void record(CommodityOperateEnum commodityOperateEnum, Long commodityId, String detail);
 
     /**
      * 查询操作日志(administrator权限8)
