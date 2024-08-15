@@ -1,13 +1,16 @@
 package com.mayang.controller;
 
 
+import com.mayang.convert.CommodityConfigConvertMapper;
+import com.mayang.entity.UserContext;
+import com.mayang.entity.dto.CreateCommodityDTO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.service.CommodityConfigService;
 import com.mayang.util.Result;
 import com.mayang.entity.params.CreateCommodityParam;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +31,8 @@ public class CommodityConfigController {
     @PostMapping("/create")
     @ApiOperation(value="创建商品信息配置")
     public Result<Boolean> createCommodityConfig(@RequestBody CreateCommodityParam createCommodityParam){
+        CreateCommodityDTO createCommodityDTO = CommodityConfigConvertMapper.INSTANCE.createCommodityDTOConvertFromParam(createCommodityParam);
+        commodityConfigService.createCommodityConfig(createCommodityDTO);
         return Result.success();
     }
 

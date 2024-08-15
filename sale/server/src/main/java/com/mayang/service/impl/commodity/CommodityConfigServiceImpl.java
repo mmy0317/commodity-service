@@ -3,8 +3,11 @@ package com.mayang.service.impl.commodity;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mayang.entity.UserContext;
 import com.mayang.entity.dos.CommodityDO;
+import com.mayang.entity.dto.UserInfoDTO;
 import com.mayang.enums.CommodityOperateEnum;
+import com.mayang.enums.RoleEnum;
 import com.mayang.util.Result;
 import com.mayang.entity.dto.CreateCommodityDTO;
 import com.mayang.entity.dto.SearchCommodityDTO;
@@ -39,7 +42,11 @@ public class CommodityConfigServiceImpl implements CommodityConfigService {
 
     @Override
     public void createCommodityConfig(CreateCommodityDTO createCommodityDTO) {
-        //step1 数据校验, todo 权限校验
+        //step1 数据校验
+        UserInfoDTO userInfoDTO = UserContext.getUserInfoDto();
+        if (RoleEnum.CUSTOMER.equals(userInfoDTO.getRoleEnum())){
+            throw new RuntimeException("无操作权限");
+        }
         commodityConfigCheck(createCommodityDTO.getCommodityName(),createCommodityDTO.getCommodityPrice(),createCommodityDTO.getCommodityCount());
         //step2 数据转换,数据存储
         CommodityDO commodityDO = new CommodityDO();

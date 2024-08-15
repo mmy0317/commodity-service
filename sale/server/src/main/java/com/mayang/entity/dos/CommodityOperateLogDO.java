@@ -45,7 +45,7 @@ public class CommodityOperateLogDO {
      *   `commodity_id` bigint(20) NOT NULL COMMENT '商品id',
      *   `operate_user_code` varchar(32) NOT NULL COMMENT '操作人code',
      *   `operate_user_name` varchar(32) NOT NULL COMMENT '操作人name',
-     *   `operate_detail` varchar(32) NOT NULL COMMENT '操作详情',
+     *   `operate_detail` varchar(256) NOT NULL COMMENT '操作详情',
      *   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
      *   PRIMARY KEY (`id`),
      *   KEY `idx_create_time` (`create_time`)

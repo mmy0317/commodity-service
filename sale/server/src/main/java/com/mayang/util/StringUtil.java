@@ -35,9 +35,4 @@ public class StringUtil {
         return result;
     }
 
-
-    public static void main(String[] args){
-
-    }
-
 }
